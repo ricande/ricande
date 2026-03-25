@@ -27,6 +27,23 @@ Minimal, modulär start på en egen 3D-motor i C# med:
 - `My3DEngine.Physics`: tunt wrapper-lager runt BEPU `Simulation`
 - `My3DEngine.Ecs`: DefaultEcs-komponenter + `TransformSystem` (physics→ecs) + `RenderSystem` (ecs→renderer)
 
+## För kodassistenter (AI): snabb karta
+
+*Syfte: indexera var saker finns. Mycket kod ligger i `Class1.cs` per projekt — sök i filen efter typnamn nedan.*
+
+| Letar du efter … | Fil | Typer / medlemmar (grep-vänliga) |
+|------------------|-----|----------------------------------|
+| Demo entry, ECS-setup, fysik-setup, musrotation | `My3DEngine.App/Program.cs` | `GameLoop.Run`, `Renderer`, `PhysicsWorld`, `World`, `yaw`/`pitch`, `mouseSensitivity` |
+| Huvudloop (fixed timestep) | `My3DEngine.Runtime/Class1.cs` | `GameLoop`, `Run` |
+| Fönster, OpenGL, Veldrid, shader, kub-mesh, MVP | `My3DEngine.Rendering/Class1.cs` | `Renderer`, `PumpEvents`, `Render`, `Camera`, `Transform`, `MeshFactory`, `CreateColoredCube`, `VertexPositionColor`, `MouseDelta`, `IsLeftMouseDown` |
+| ECS-komponenter, sync fysik→position, draw | `My3DEngine.Ecs/Class1.cs` | `TransformComponent`, `CameraComponent`, `MeshComponent`, `RigidBodyComponent`, `TransformSystem`, `RenderSystem` |
+| BEPU-wrapper, bodies, step | `My3DEngine.Physics/Class1.cs` | `PhysicsWorld`, `AddStaticBox`, `AddDynamicBox`, `AddDynamicSphere`, `StepSimulation`, `PhysicsBody`, `GetPose` |
+| Assimp / ImageSharp, interna asset-typer | `My3DEngine.Assets/Class1.cs` | `AssetImporter`, `ImportScene`, `LoadTexture`, `AssetScene`, `AssetMesh`, `AssetMaterial` |
+| Lösning + projekt | `My3DEngine.sln`, `My3DEngine.*/My3DEngine.*.csproj` | — |
+| Mänsklig manual | `docs/MANUAL.md` (sv), `docs/MANUAL.en-US.md` (en-US) | — |
+
+**Sökord för semantisk sökning:** `VeldridStartup`, `GraphicsBackend.OpenGL`, `CreateFromSpirv`, `DefaultEcs.World`, `Simulation.Timestep`, `AssimpContext`.
+
 ## NuGet-paket
 
 - `My3DEngine.Rendering`
