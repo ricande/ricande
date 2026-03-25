@@ -1,11 +1,12 @@
 # My3DEngine (net8.0)
 
-Git-repo: **ricande** (lokal `main`-branch). Skapa ett tomt repo med samma namn på t.ex. GitHub och koppla:
+## Om detta repo
 
-```powershell
-git remote add origin https://github.com/<din-användare>/ricande.git
-git push -u origin main
-```
+Det här är **ricande** på GitHub: en liten, modulär **3D-motor i C# (.NET 8)** som byggs vidare stegvis. Målet är tydlig separation mellan runtime, rendering, assets, fysik och ECS — inte en färdig spelmotor, utan en **fungerande bas** att utöka.
+
+**Remote:** [github.com/ricande/ricande](https://github.com/ricande/ricande)
+
+### Teknikstack (nu)
 
 Minimal, modulär start på en egen 3D-motor i C# med:
 
