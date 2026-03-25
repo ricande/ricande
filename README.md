@@ -6,6 +6,8 @@ Det här är **ricande** på GitHub: en liten, modulär **3D-motor i C# (.NET 8)
 
 **Remote:** [github.com/ricande/ricande](https://github.com/ricande/ricande)
 
+**Manual (aktuellt läge):** [docs/MANUAL.md](docs/MANUAL.md)
+
 ### Teknikstack (nu)
 
 Minimal, modulär start på en egen 3D-motor i C# med:
