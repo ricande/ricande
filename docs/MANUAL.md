@@ -2,6 +2,8 @@
 
 *Version enligt kodbasen idag. Uppdatera detta dokument när beteende eller arkitektur ändras.*
 
+**Other language:** [English (en-US)](MANUAL.en-US.md)
+
 ---
 
 ## 1. Vad projektet är
